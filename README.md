@@ -29,6 +29,7 @@ CreeperRevealer/
 │   ├── depth_maps/
 │   └── no_bg/
 ├── scripts/
+│   ├── batch_process.py
 │   ├── face_detect.py
 │   ├── depth.py
 │   ├── background_removal.py
