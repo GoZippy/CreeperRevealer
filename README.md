@@ -37,3 +37,34 @@ CreeperRevealer/
 ├── README.md
 ├── requirements.txt
 └── environment.yaml
+```
+
+2. Install the required packages:
+```bash
+conda env create -f environment.yaml
+conda activate creeperrevealer
+```
+3. Place your video frames in the data/frames directory.
+
+## Usage
+
+1. Run face detection
+```bash
+python scripts/face_detect.py
+```
+2. Generate depth maps:
+```bash
+python scripts/background_removal.py
+```
+3. Remove backgrounds
+```bash
+python scripts/background_removal.py
+```
+4. Perform 3D reconstruction:
+```bash
+python scripts/reconstruct_3d.py
+```
+
+## Law Enforcement and Commercial Use please contact us for license.
+
+
