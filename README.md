@@ -15,3 +15,23 @@ CreeperRevealer is a tool designed to process video frames to detect, enhance, a
    ```bash
    git clone https://github.com/GoZippy/CreeperRevealer.git
    cd CreeperRevealer
+
+## Directory Structure
+CreeperRevealer/
+├── config/
+│   └── config.yaml
+├── data/
+│   ├── frames/
+│   ├── aligned/
+│   ├── depth_maps/
+│   └── no_bg/
+├── scripts/
+│   ├── face_detect.py
+│   ├── depth.py
+│   ├── background_removal.py
+│   └── reconstruct_3d.py
+├── models/
+│   └── dpt_beit_large_512.pt
+├── LICENSE
+├── README.md
+└── requirements.txt
