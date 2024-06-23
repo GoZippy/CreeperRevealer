@@ -2,6 +2,8 @@
 
 CreeperRevealer is a tool designed to process video frames to detect, enhance, and reconstruct faces and human shapes in 3D. This project leverages various AI models to extract and enhance facial features, remove backgrounds, and perform 3D reconstruction from low-quality, low-resolution security footage.
 
+CreeperRevealer is an advanced Python-based toolkit designed for forensic analysis of video footage. Leveraging state-of-the-art AI models, CreeperRevealer processes video frames to detect and reconstruct obscured faces and generate detailed 3D models of suspects. This project integrates facial recognition, depth estimation, and 3D reconstruction to aid law enforcement in identifying and capturing perpetrators from low-quality security footage.
+
 ## Features
 
 - Face detection and alignment
