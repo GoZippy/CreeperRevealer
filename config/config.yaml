@@ -1,0 +1,6 @@
+model_path: models/dpt_beit_large_512.pt
+directories:
+  frames: data/frames
+  aligned: data/aligned
+  depth_maps: data/depth_maps
+  no_bg: data/no_bg
