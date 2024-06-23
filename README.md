@@ -17,6 +17,7 @@ CreeperRevealer is a tool designed to process video frames to detect, enhance, a
    cd CreeperRevealer
 
 ## Directory Structure
+```plaintext
 CreeperRevealer/
 ├── config/
 │   └── config.yaml
@@ -34,4 +35,5 @@ CreeperRevealer/
 │   └── dpt_beit_large_512.pt
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── environment.yaml
