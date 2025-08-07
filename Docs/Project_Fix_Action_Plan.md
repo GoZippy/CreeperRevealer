@@ -1,29 +1,29 @@
 ### Project Fix Action Plan
 
 - **Path handling**
-  - Refactor scripts to accept `--config` path and resolve relative to repo root; avoid `../config/config.yaml`.
-  - Use `pathlib.Path` and robust existence checks.
+  - DONE: Scripts accept `--config` and default to `config/config.yaml`.
+  - NEXT: Centralize path resolution with `pathlib.Path` and ensure output directories are created lazily.
 
 - **Modularization**
-  - Move procedural code into callable functions (e.g., `detect_faces`, `estimate_depth`, `remove_background`, `reconstruct_mesh`).
-  - Add `if __name__ == "__main__":` entrypoints with `argparse`.
+  - DONE: Converted scripts to `main()` with argparse and structured logging.
+  - NEXT: Extract core logic into reusable functions and a small library module (e.g., `crlib/processing.py`).
 
 - **Dependencies and models**
-  - Add `midas` loader dependency or vendor minimal loader; provide model download script with checksum.
-  - Provide CPU fallback and configurable device selection.
+  - NEXT: Add model download helper with checksum; document CPU/GPU selection flag and environment variable.
 
 - **Error handling & logging**
-  - Implement structured logging; surface warnings for skipped files; fail-fast options.
+  - DONE: Basic logging added.
+  - NEXT: Structured logging, file logging option, and better exception surfacing.
 
 - **Testing**
-  - Keep unit tests with mocks; add integration tests with small sample images committed via git-lfs.
-  - Set up CI (GitHub Actions) for CPU-only test matrix.
+  - DONE: Unit tests for each script including orchestrator.
+  - NEXT: Add small integration tests with sample images (if licensing permits) and extend CI.
 
 - **3D reconstruction**
-  - Implement actual pipeline (e.g., Poisson/screened Poisson, TSDF, or depth-to-point-cloud + meshing) and persist `.ply`/`.obj` outputs.
+  - NEXT: Implement depth-to-point-cloud and meshing pipeline with `.ply` output; add unit/integration tests.
 
 - **Documentation**
-  - Fix README typos/steps; document full pipeline, CLI usage, and environment setup.
+  - NEXT: Update README with new CLI usage; add examples.
 
 - **Packaging**
-  - Provide a `setup.py` or `pyproject.toml`; optional CLI entry point `creeperrevealer`.
+  - NEXT: `pyproject.toml` and CLI entry-point.

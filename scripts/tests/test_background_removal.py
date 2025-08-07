@@ -1,4 +1,5 @@
 import os
+import sys
 import runpy
 import types
 import unittest
@@ -30,7 +31,8 @@ class TestBackgroundRemovalScript(unittest.TestCase):
         )
 
         with patch.dict("sys.modules", {"cv2": cv2_module, "yaml": yaml_module}):
-            runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "background_removal.py"), run_name="__main__")
+            with patch.object(sys, 'argv', ['background_removal.py']):
+                runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "background_removal.py"), run_name="__main__")
 
         self.assertTrue(True)
 

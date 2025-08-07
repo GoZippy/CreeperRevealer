@@ -1,4 +1,5 @@
 import os
+import sys
 import runpy
 import types
 import unittest
@@ -55,7 +56,8 @@ class TestFaceDetectScript(unittest.TestCase):
         setattr(dlib_module, "get_frontal_face_detector", get_frontal_face_detector)
 
         with patch.dict("sys.modules", {"cv2": cv2_module, "yaml": yaml_module, "dlib": dlib_module}):
-            runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "face_detect.py"), run_name="__main__")
+            with patch.object(sys, 'argv', ['face_detect.py']):
+                runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "face_detect.py"), run_name="__main__")
 
         # Ensure write was attempted with expected naming
         fake_imwrite.assert_called()

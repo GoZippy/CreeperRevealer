@@ -6,14 +6,17 @@
   - **Flow diagram**: Corrected Mermaid fence and finalized pipeline chart in `Docs/Flow_Diagram.md`.
   - **Unit tests**: Added comprehensive tests for `scripts/*.py` with mocks for heavy deps; all tests passing.
   - **Orchestrator test**: Added `test_batch_process.py` to verify sequencing and subprocess calls.
-  - **Testing report**: Updated `Docs/Testing_Report.md` with results (5/5 passing).
+  - **Refactor**: Introduced argparse-based `main()` and logging to all scripts.
+  - **Testing report**: Updated `Docs/Testing_Report.md` with results (5/5 passing) and refactor validation.
 
 - **In Progress**
-  - **Gap analysis and fix plan**: Drafting actionable items in `Docs/Project_Fix_Action_Plan.md` based on code review and tests.
+  - **Gap analysis and fix plan**: Updated with completed refactors and next steps.
 
 - **Next**
-  - **Refactors**: Start modularization and CLI improvements per action plan, then extend tests accordingly.
-  - **Enhancements**: Expand `Docs/Enhancements.md` with prioritized UX/feature ideas and estimates.
+  - **Library extraction**: Create `crlib/` with reusable functions (`detect_faces`, `estimate_depth`, `remove_background`, `reconstruct_mesh`).
+  - **Packaging/CLI**: Add `pyproject.toml` and CLI entry point.
+  - **README**: Update usage docs with `--config` and examples.
+  - **3D pipeline**: Implement depth-to-point-cloud + meshing placeholder and tests.
 
 Notes:
 - No frontend detected; scope is Python backend scripts. Frontend-related tasks will be interpreted as CLI/UX improvements and optional future web UI.

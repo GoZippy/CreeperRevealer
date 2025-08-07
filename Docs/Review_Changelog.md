@@ -7,3 +7,4 @@
 - docs(test): generate automated testing report with passing results
 - fix(docs): correct Mermaid code fence in `Docs/Flow_Diagram.md`
 - test(orchestrator): add `test_batch_process.py` to validate sequencing and subprocess usage
+- refactor(scripts): add argparse and logging; introduce `main()` entrypoints across scripts

@@ -3,7 +3,7 @@
 Date: [auto]
 
 Summary:
-- All unit tests passed (5/5).
+- All unit tests passed (5/5). Refactor to argparse/logging validated by tests.
 
 Executed suites:
 - test_face_detect.py: Validated IO flow, detector integration, and output write naming under mocks.

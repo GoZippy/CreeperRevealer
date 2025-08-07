@@ -1,4 +1,5 @@
 import os
+import sys
 import runpy
 import types
 import unittest
@@ -101,7 +102,8 @@ class TestDepthScript(unittest.TestCase):
                 "midas.model_loader": midas_loader_module,
             },
         ):
-            runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "depth.py"), run_name="__main__")
+            with patch.object(sys, 'argv', ['depth.py']):
+                runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "depth.py"), run_name="__main__")
 
         self.assertTrue(True)
 

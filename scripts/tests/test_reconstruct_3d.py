@@ -1,4 +1,5 @@
 import os
+import sys
 import runpy
 import types
 import unittest
@@ -16,7 +17,8 @@ class TestReconstruct3DScript(unittest.TestCase):
         )
         o3d_module = types.SimpleNamespace()
         with patch.dict("sys.modules", {"yaml": yaml_module, "open3d": o3d_module}):
-            runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "reconstruct_3d.py"), run_name="__main__")
+            with patch.object(sys, 'argv', ['reconstruct_3d.py']):
+                runpy.run_path(os.path.join(os.path.dirname(__file__), "..", "reconstruct_3d.py"), run_name="__main__")
         self.assertTrue(True)
 
 
