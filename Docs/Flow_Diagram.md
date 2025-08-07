@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
     A[Input video frames\n`data/frames`] --> B[Face detection & alignment\n`scripts/face_detect.py`\n-> `data/aligned`]
     B --> C[Depth estimation (MiDaS)\n`scripts/depth.py`\n-> `data/depth_maps`]

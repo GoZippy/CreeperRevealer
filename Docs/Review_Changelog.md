@@ -5,3 +5,5 @@
 - docs(plan): created actionable task plan with current/next steps
 - test(scripts): add unit tests for face detection, depth, background removal, and 3D reconstruct placeholder using lightweight mocks
 - docs(test): generate automated testing report with passing results
+- fix(docs): correct Mermaid code fence in `Docs/Flow_Diagram.md`
+- test(orchestrator): add `test_batch_process.py` to validate sequencing and subprocess usage
